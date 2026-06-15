@@ -2293,11 +2293,7 @@ function buildHistChart(){
 }
 
 // Anima barras quando a aba de Metas é aberta
-const _origShowView = showView;
-window.showView = function(v, btn){
-  _origShowView(v, btn);
-  if(v==="metasView"){ setTimeout(()=>{ animateBars(); buildHistChart(); },100); }
-};
+// [showView override removido]
 
 // ─── NOTIFICAÇÕES ────────────────────────────────────────────────
 let notifOpen = false;
@@ -2969,14 +2965,7 @@ function entrarContato(nome) {
   document.getElementById('pecaModal').classList.remove('open');
 }
 
-// Inicializa ao abrir as views
-const _origShowView2 = window.showView;
-window.showView = function(v, btn) {
-  _origShowView2(v, btn);
-  if (v === 'feedView') renderFeed(postsFeed);
-  if (v === 'fornecedorView') renderFornecedores();
-  if (v === 'marketplaceView') renderPecas(pecasMkt, 'pecasGrid');
-};
+// [showView override removido]
 </script>
 
 <script>
@@ -3196,15 +3185,50 @@ function renderMetasBoard() {
   }).join('');
 }
 
-// Inicializa ao abrir a aba
-const _origShowView3 = window.showView;
-window.showView = function(v, btn) {
-  _origShowView3(v, btn);
-  if (v === 'metasBoardView') {
-    document.getElementById('metasAnoAtual').textContent = ANO_ATUAL;
-    setTimeout(renderMetasBoard, 100);
+// [showView override removido]
+</script>
+
+<script>
+// ─── SHOWVIEW DEFINITIVO ─────────────────────────────────────────
+// Substitui todas as versões encadeadas por uma única função limpa
+function showView(v, btn) {
+  // Atualiza tabs
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+
+  // Mostra/esconde views
+  const views = ['treeView','communityView','profileView','metasBoardView',
+                 'iaView','feedView','fornecedorView','marketplaceView'];
+  views.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = (id === v) ? 'block' : 'none';
+  });
+
+  // Inicializações específicas por view
+  if (v === 'treeView') {
+    setTimeout(() => { buildTree(); }, 100);
   }
-};
+  if (v === 'feedView') {
+    setTimeout(() => { if(typeof renderFeed==='function') renderFeed(postsFeed); }, 100);
+  }
+  if (v === 'fornecedorView') {
+    setTimeout(() => { if(typeof renderFornecedores==='function') renderFornecedores(); }, 100);
+  }
+  if (v === 'marketplaceView') {
+    setTimeout(() => { if(typeof renderPecas==='function') renderPecas(pecasMkt, 'pecasGrid'); }, 100);
+  }
+  if (v === 'metasBoardView') {
+    const anoEl = document.getElementById('metasAnoAtual');
+    if (anoEl) anoEl.textContent = new Date().getFullYear();
+    setTimeout(() => { if(typeof renderMetasBoard==='function') renderMetasBoard(); }, 100);
+  }
+  if (v === 'communityView') {
+    // nada especial
+  }
+}
+
+// Sobrescreve window.showView para garantir que esta versão seja usada
+window.showView = showView;
 </script>
 </body>
 </html>
