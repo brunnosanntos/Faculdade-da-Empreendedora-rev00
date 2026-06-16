@@ -592,6 +592,170 @@ body{font-family:"Segoe UI",Arial,sans-serif;background:#1a4d2e;min-height:100vh
 
 /* Aviso de renovação anual */
 .aviso-renovacao{background:rgba(212,168,67,0.08);border:0.5px solid rgba(212,168,67,0.25);border-radius:10px;padding:12px 14px;margin-bottom:16px;display:flex;align-items:center;gap:10px;font-size:12px;color:rgba(255,255,255,0.6)}
+
+/* ═══════════════════════════════════════════════════════════
+   HOME / MENU PRINCIPAL
+═══════════════════════════════════════════════════════════ */
+.home-wrap{min-height:calc(100vh - 60px);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:24px 16px}
+.home-logo{text-align:center;margin-bottom:28px}
+.home-logo h1{font-size:24px;font-weight:700;color:#F5E6C8}
+.home-logo h1 span{color:#D4A843}
+.home-logo p{font-size:13px;color:rgba(255,255,255,0.4);margin-top:4px}
+.home-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:100%;max-width:560px}
+.home-card{background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.12);border-radius:16px;padding:20px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;transition:all 0.2s;text-align:center}
+.home-card:hover{background:rgba(212,168,67,0.12);border-color:rgba(212,168,67,0.4);transform:translateY(-2px)}
+.home-card:active{transform:translateY(0)}
+.home-card-icon{font-size:32px;line-height:1}
+.home-card-label{font-size:13px;font-weight:600;color:#F5E6C8}
+.home-card-sub{font-size:10px;color:rgba(255,255,255,0.35);line-height:1.4}
+.home-card.destaque{background:rgba(212,168,67,0.1);border-color:rgba(212,168,67,0.35)}
+.home-card.destaque .home-card-label{color:#D4A843}
+
+/* Header simplificado */
+.header-simple{background:rgba(0,0,0,0.3);padding:12px 18px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;backdrop-filter:blur(6px)}
+.header-logo-s{font-size:15px;font-weight:700;color:#F5E6C8}
+.header-logo-s span{color:#D4A843}
+.header-right{display:flex;align-items:center;gap:8px}
+
+/* Botão voltar no topo de cada view */
+.view-header{display:flex;align-items:center;gap:10px;padding:12px 16px 0;max-width:780px;margin:0 auto}
+.btn-voltar{display:flex;align-items:center;gap:5px;padding:6px 13px;border-radius:8px;border:0.5px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.6);font-size:12px;cursor:pointer;font-family:inherit;transition:all 0.15s}
+.btn-voltar:hover{background:rgba(255,255,255,0.13);color:#F5E6C8}
+.view-title{font-size:15px;font-weight:700;color:#F5E6C8}
+
+/* ─── ZOOM INTELIGENTE ─── */
+.tree-toolbar{display:flex;align-items:center;gap:8px;padding:8px 14px;background:rgba(0,0,0,0.15);border-bottom:0.5px solid rgba(255,255,255,0.08);flex-wrap:wrap}
+.tree-toolbar .sw{max-width:240px}
+.tree-toolbar .sw input{height:30px;font-size:12px}
+.zoom-info{font-size:11px;color:rgba(255,255,255,0.4);margin-left:auto}
+.zoom-info strong{color:#D4A843}
+.turma-select{background:rgba(255,255,255,0.07);border:0.5px solid rgba(255,255,255,0.15);border-radius:7px;padding:0 10px;font-size:12px;color:#F5E6C8;font-family:inherit;height:30px}
+.turma-select option{background:#1a4d2e}
+.estado-select{background:rgba(255,255,255,0.07);border:0.5px solid rgba(255,255,255,0.15);border-radius:7px;padding:0 10px;font-size:12px;color:#F5E6C8;font-family:inherit;height:30px}
+.estado-select option{background:#1a4d2e}
+.zoom-btns{display:flex;align-items:center;gap:3px}
+.zoom-btn{width:26px;height:26px;border-radius:6px;border:0.5px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.07);color:#F5E6C8;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:inherit}
+.zoom-btn:hover{background:rgba(255,255,255,0.15)}
+.zoom-val{font-size:11px;color:rgba(255,255,255,0.5);min-width:34px;text-align:center}
+
+/* Highlight de busca */
+.node-highlight rect,.node-highlight circle{filter:drop-shadow(0 0 8px #D4A843)}
+.node-found-label{fill:#D4A843;font-weight:700}
+
+/* ═══════════════════════════════════════════════════════════
+   MÓDULO FINANCEIRO
+═══════════════════════════════════════════════════════════ */
+.fin-wrap{max-width:1100px;margin:0 auto;padding:16px 12px}
+.fin-tabs{display:flex;gap:4px;margin-bottom:18px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.fin-tab{padding:7px 16px;border-radius:8px;border:0.5px solid rgba(255,255,255,0.15);background:transparent;color:rgba(255,255,255,0.5);font-size:12px;cursor:pointer;font-family:inherit;white-space:nowrap;transition:all 0.15s}
+.fin-tab.active{background:rgba(212,168,67,0.2);border-color:#D4A843;color:#D4A843;font-weight:700}
+.fin-tab:hover:not(.active){background:rgba(255,255,255,0.07);color:#F5E6C8}
+.fin-section{display:none}
+.fin-section.active{display:block}
+
+/* KPI row */
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+.kpi-fin{background:rgba(255,255,255,0.05);border:0.5px solid rgba(255,255,255,0.1);border-radius:12px;padding:14px 16px}
+.kpi-fin.verde{border-color:rgba(80,180,60,0.3);background:rgba(80,180,60,0.06)}
+.kpi-fin.ouro{border-color:rgba(212,168,67,0.3);background:rgba(212,168,67,0.06)}
+.kpi-fin.azul{border-color:rgba(80,144,224,0.3);background:rgba(80,144,224,0.06)}
+.kpi-fin.vermelho{border-color:rgba(220,60,60,0.3);background:rgba(220,60,60,0.06)}
+.kpi-fin-val{font-size:22px;font-weight:700;color:#F5E6C8;margin-bottom:3px}
+.kpi-fin-lbl{font-size:11px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.4px}
+.kpi-fin-delta{font-size:11px;margin-top:5px}
+.delta-pos{color:#5CB040}
+.delta-neg{color:#E04040}
+.delta-neu{color:rgba(255,255,255,0.3)}
+
+/* Tabelas financeiras */
+.fin-card{background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.08);border-radius:14px;padding:18px;margin-bottom:14px}
+.fin-card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px}
+.fin-card-title{font-size:14px;font-weight:700;color:#D4A843;display:flex;align-items:center;gap:8px}
+.fin-table{width:100%;border-collapse:collapse;font-size:13px}
+.fin-table th{padding:9px 12px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.35);border-bottom:0.5px solid rgba(255,255,255,0.08);font-weight:600}
+.fin-table td{padding:10px 12px;border-bottom:0.5px solid rgba(255,255,255,0.05);color:rgba(255,255,255,0.75);vertical-align:middle}
+.fin-table tr:last-child td{border-bottom:none}
+.fin-table tr:hover td{background:rgba(255,255,255,0.03)}
+.fin-table .total-row td{font-weight:700;color:#F5E6C8;border-top:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.04)}
+.fin-table .subtotal-row td{font-weight:600;color:rgba(255,255,255,0.6);background:rgba(255,255,255,0.02);font-style:italic}
+.val-pos{color:#5CB040;font-weight:600}
+.val-neg{color:#E04040;font-weight:600}
+.val-neu{color:rgba(255,255,255,0.5)}
+.categoria-badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:10px;font-weight:600}
+.cat-receita{background:rgba(80,180,60,0.15);color:#5CB040}
+.cat-custo{background:rgba(220,60,60,0.15);color:#E04040}
+.cat-despesa{background:rgba(212,168,67,0.15);color:#D4A843}
+.cat-invest{background:rgba(80,144,224,0.15);color:#5090E0}
+.cat-salario{background:rgba(160,130,200,0.15);color:#A087C8}
+
+/* Gráfico de barras simples */
+.bar-chart{display:flex;align-items:flex-end;gap:6px;height:140px;padding:0 4px}
+.bar-col{display:flex;flex-direction:column;align-items:center;gap:4px;flex:1}
+.bar-fill{width:100%;border-radius:4px 4px 0 0;min-height:4px;transition:height 0.8s ease}
+.bar-label{font-size:9px;color:rgba(255,255,255,0.35);text-align:center;white-space:nowrap}
+.bar-val{font-size:9px;color:rgba(255,255,255,0.5);text-align:center}
+
+/* Gráfico de pizza simples */
+.pizza-wrap{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.pizza-legend{display:flex;flex-direction:column;gap:8px}
+.pizza-item{display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,0.6)}
+.pizza-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+
+/* Formulário de lançamento */
+.lancamento-form{background:rgba(212,168,67,0.06);border:0.5px solid rgba(212,168,67,0.2);border-radius:12px;padding:16px;margin-bottom:14px}
+.lancamento-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:10px;align-items:end}
+.fin-field label{display:block;font-size:10px;color:rgba(255,255,255,0.4);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.4px}
+.fin-field input,.fin-field select,.fin-field textarea{width:100%;background:rgba(255,255,255,0.07);border:0.5px solid rgba(255,255,255,0.15);border-radius:8px;padding:8px 10px;font-size:12px;color:#F5E6C8;font-family:inherit}
+.fin-field input:focus,.fin-field select:focus{outline:none;border-color:#D4A843}
+.fin-field select option{background:#1a2e1a}
+.btn-lancar{padding:9px 18px;border-radius:8px;border:none;background:#D4A843;color:#2D1B00;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap;height:36px}
+.btn-lancar:hover{opacity:0.9}
+
+/* Precificação */
+.preco-card{background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;margin-bottom:10px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.preco-info{flex:1;min-width:180px}
+.preco-nome{font-size:14px;font-weight:700;color:#F5E6C8;margin-bottom:3px}
+.preco-desc{font-size:11px;color:rgba(255,255,255,0.4)}
+.preco-atual{font-size:22px;font-weight:700;color:#D4A843;min-width:110px;text-align:center}
+.preco-input-wrap{display:flex;gap:6px;align-items:center}
+.preco-input-wrap input{width:110px;background:rgba(255,255,255,0.07);border:0.5px solid rgba(255,255,255,0.2);border-radius:8px;padding:7px 10px;font-size:13px;color:#F5E6C8;font-family:inherit;text-align:center}
+.preco-input-wrap input:focus{outline:none;border-color:#D4A843}
+.btn-atualizar-preco{padding:7px 14px;border-radius:8px;border:none;background:rgba(212,168,67,0.2);color:#D4A843;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit}
+.btn-atualizar-preco:hover{background:rgba(212,168,67,0.35)}
+.preco-historico{font-size:10px;color:rgba(255,255,255,0.25);margin-top:4px}
+
+/* BI */
+.bi-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.bi-card{background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.08);border-radius:14px;padding:16px}
+.bi-card-title{font-size:12px;font-weight:700;color:#D4A843;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.4px}
+.meta-vs-real{display:flex;flex-direction:column;gap:10px}
+.mvr-item{display:flex;flex-direction:column;gap:4px}
+.mvr-label{font-size:11px;color:rgba(255,255,255,0.5);display:flex;justify-content:space-between}
+.mvr-track{height:10px;background:rgba(255,255,255,0.06);border-radius:999px;overflow:hidden;position:relative}
+.mvr-real{height:100%;border-radius:999px;transition:width 0.8s}
+.mvr-meta-line{position:absolute;top:0;bottom:0;width:2px;background:rgba(255,255,255,0.3)}
+
+/* Período selector */
+.periodo-sel{display:flex;gap:4px}
+.periodo-btn{padding:4px 10px;border-radius:6px;border:0.5px solid rgba(255,255,255,0.15);background:transparent;color:rgba(255,255,255,0.4);font-size:11px;cursor:pointer;font-family:inherit}
+.periodo-btn.active{background:rgba(212,168,67,0.2);border-color:#D4A843;color:#D4A843}
+
+/* Alçada */
+.alcada-table{width:100%;border-collapse:collapse}
+.alcada-table th{padding:8px 12px;font-size:10px;text-transform:uppercase;letter-spacing:0.4px;color:rgba(255,255,255,0.35);border-bottom:0.5px solid rgba(255,255,255,0.08);text-align:left}
+.alcada-table td{padding:10px 12px;border-bottom:0.5px solid rgba(255,255,255,0.05);font-size:12px;color:rgba(255,255,255,0.7)}
+.toggle-alcada{width:34px;height:18px;border-radius:9px;border:none;cursor:pointer;position:relative;transition:background 0.2s;flex-shrink:0}
+.toggle-alcada::after{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:#fff;top:3px;transition:left 0.2s}
+.toggle-alcada.on{background:#5CB040}
+.toggle-alcada.on::after{left:19px}
+.toggle-alcada.off{background:rgba(255,255,255,0.15)}
+.toggle-alcada.off::after{left:3px}
+.cargo-badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:10px;font-weight:700}
+.cargo-diretor{background:rgba(212,168,67,0.2);color:#D4A843}
+.cargo-gerente{background:rgba(80,144,224,0.2);color:#5090E0}
+.cargo-coordenador{background:rgba(80,180,60,0.2);color:#5CB040}
+.cargo-vendedor{background:rgba(160,130,200,0.2);color:#A087C8}
+.cargo-auxiliar{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.5)}
 </style>
 </head>
 <body>
@@ -742,28 +906,26 @@ body{font-family:"Segoe UI",Arial,sans-serif;background:#1a4d2e;min-height:100vh
 <!-- ══ APP ══ -->
 <div id="appShell" style="display:none">
 
-<div class="header">
-  <div class="logo">Faculdade da <span>Empreendedora</span></div>
-  <div class="nav">
-    <button class="tab active" onclick="showView('treeView',this)">&#127795; Árvore</button>
-    <button class="tab" onclick="showView('communityView',this)">&#128172; Comunidade</button>
-    <button class="tab" onclick="showView('profileView',this)">&#128100; Meu Perfil</button>
-    <button class="tab" onclick="showView('metasBoardView',this)">&#127919; Metas</button>
-    <button class="tab" onclick="showView('iaView',this)">&#10024; Chefa.IA</button>
-    <button class="tab" onclick="showView('feedView',this)">&#128247; Feed</button>
-    <button class="tab" onclick="showView('fornecedorView',this)">&#127981; Fornecedor</button>
-    <button class="tab" onclick="showView('marketplaceView',this)">&#128722; Marketplace</button>
+<div class="header-simple">
+  <div style="display:flex;align-items:center;gap:10px">
+    <button id="headerBackBtn" class="btn-voltar" onclick="voltarHome()" style="display:none">
+      ← Início
+    </button>
+    <div class="header-logo-s">Faculdade da <span>Empreendedora</span></div>
+    <span id="headerViewTitle" style="font-size:13px;color:rgba(255,255,255,0.4)"></span>
   </div>
-  <div class="notif-bell" onclick="toggleNotif()" title="Notificações">
-    <span style="font-size:20px;line-height:1">&#128276;</span>
-    <div class="notif-badge" id="notifBadge">4</div>
-  </div>
-  <button class="tab" style="border-color:rgba(212,168,67,0.3;color:rgba(212,168,67,0.7);font-size:12px" onclick="openAdmin()">&#9881; Admin</button>
-  <div class="user-chip" onclick="showView('profileView',document.querySelectorAll('.tab')[2])">
-    <div class="user-avatar">AP</div>
-    <span>Ana Paula</span>
+  <div class="header-right">
+    <div class="notif-bell" onclick="toggleNotif()" title="Notificações" style="font-size:20px;cursor:pointer">
+      🔔<div class="notif-badge" id="notifBadge">4</div>
+    </div>
+    <div class="user-chip" onclick="irPara('profileView','👤 Meu Perfil')">
+      <div class="user-avatar">AP</div>
+      <span>Ana Paula</span>
+    </div>
   </div>
 </div>
+
+
 
 <div class="search-bar">
   <div class="sw">
@@ -780,7 +942,67 @@ body{font-family:"Segoe UI",Arial,sans-serif;background:#1a4d2e;min-height:100vh
 </div>
 
 <!-- TREE VIEW -->
-<div id="treeView" class="view active">
+
+
+<!-- HOME VIEW -->
+<div id="homeView" class="view active">
+  <div class="home-wrap">
+    <div class="home-logo">
+      <h1>Faculdade da <span>Empreendedora</span></h1>
+      <p>Bem-vinda, Ana Paula! 👋</p>
+    </div>
+    <div class="home-grid">
+      <div class="home-card destaque" onclick="irPara('treeView','🌳 Árvore')">
+        <div class="home-card-icon">🌳</div>
+        <div class="home-card-label">Árvore</div>
+        <div class="home-card-sub">Comunidade de alunas</div>
+      </div>
+      <div class="home-card" onclick="irPara('feedView','📸 Feed')">
+        <div class="home-card-icon">📸</div>
+        <div class="home-card-label">Feed</div>
+        <div class="home-card-sub">Posts e novidades</div>
+      </div>
+      <div class="home-card" onclick="irPara('communityView','💬 Comunidade')">
+        <div class="home-card-icon">💬</div>
+        <div class="home-card-label">Comunidade</div>
+        <div class="home-card-sub">Chat das alunas</div>
+      </div>
+      <div class="home-card" onclick="irPara('marketplaceView','🛍️ Marketplace')">
+        <div class="home-card-icon">🛍️</div>
+        <div class="home-card-label">Marketplace</div>
+        <div class="home-card-sub">Compre e venda</div>
+      </div>
+      <div class="home-card" onclick="irPara('iaView','✨ Chefa.IA')">
+        <div class="home-card-icon">✨</div>
+        <div class="home-card-label">Chefa.IA</div>
+        <div class="home-card-sub">Assistente de vendas</div>
+      </div>
+      <div class="home-card" onclick="irPara('metasBoardView','🎯 Metas')">
+        <div class="home-card-icon">🎯</div>
+        <div class="home-card-label">Metas</div>
+        <div class="home-card-sub">Meus objetivos</div>
+      </div>
+      <div class="home-card" onclick="irPara('fornecedorView','🏭 Fornecedor')">
+        <div class="home-card-icon">🏭</div>
+        <div class="home-card-label">Fornecedor</div>
+        <div class="home-card-sub">Parceiros e planos</div>
+      </div>
+      <div class="home-card" onclick="irPara('profileView','👤 Meu Perfil')">
+        <div class="home-card-icon">👤</div>
+        <div class="home-card-label">Meu Perfil</div>
+        <div class="home-card-sub">Dados e configurações</div>
+      </div>
+      <div class="home-card" onclick="openAdmin()">
+        <div class="home-card-icon">⚙️</div>
+        <div class="home-card-label">Admin</div>
+        <div class="home-card-sub">Painel de gestão</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="treeView" class="view">
   <div class="tree-outer" id="treeOuter" id="treeOuter"
        onwheel="onWheel(event)"
        onmousedown="onDragStart(event)"
@@ -1390,6 +1612,7 @@ body{font-family:"Segoe UI",Arial,sans-serif;background:#1a4d2e;min-height:100vh
     <div id="pecaModalContent"></div>
   </div>
 </div>
+
 </div><!-- /appShell -->
 
 <!-- MODAL -->
@@ -1491,6 +1714,11 @@ const alunas=[
 {id:24,nome:"Ximena Borges",loja:"XimeStyle",ig:"@ximestyle",igLoja:"@ximestyleloja",site:"https://ximestyle.com.br",segAntes:1300,segAgora:5700,faturAntes:"R$ 4.600",faturAgora:"R$ 16.100",historia:"Hoje sou mentora de outras empreendedoras!",cor:"#A87AAB",ini:"XB"},
 ];
 
+// Lista completa
+const TODAS_ALUNAS = [...alunas];
+let visible = TODAS_ALUNAS.slice(0, 250);
+
+
 // ─── POSIÇÕES BASE dos nós (para 24 alunas, raio=26) ──
 // Quando houver mais alunas, novas posições são geradas automaticamente
 const BASE_POS=[
@@ -1569,7 +1797,6 @@ function onTouchMove(e){
 function onTouchEnd(){dragging=false;}
 
 // ─── BUILD TREE ─────────────────────────────────────────
-let visible=[...alunas];
 function buildTree(R){
   if(R===undefined)R=Math.max(10,Math.min(26,26*(0.4+0.6*zoomLevel)));
   const svg=document.getElementById("nodesSVG");
@@ -1620,7 +1847,7 @@ function buildTree(R){
 
 function filterTree(){
   const q=document.getElementById("searchInput").value.toLowerCase();
-  visible=q?alunas.filter(a=>a.nome.toLowerCase().includes(q)||a.loja.toLowerCase().includes(q)||a.ig.toLowerCase().includes(q)):[...alunas];
+  visible=q?TODAS_ALUNAS.filter(a=>a.nome.toLowerCase().includes(q)||a.loja.toLowerCase().includes(q)||(a.ig||"").toLowerCase().includes(q)):TODAS_ALUNAS.slice(0,250);
   document.getElementById("visCount").textContent=visible.length;
   buildTree();
 }
@@ -1669,12 +1896,31 @@ function sendChat(){
 }
 
 // ─── VIEWS ───────────────────────────────────────────────
-function showView(v,btn){
-  document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
-  if(btn)btn.classList.add("active");
-  ["treeView","communityView","profileView"].forEach(id=>{
-    document.getElementById(id).classList.toggle("active",id===v);
+function showView(v, btn) {
+  document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+  if (btn) btn.classList.add("active");
+
+  const ALL_VIEWS = [
+    "treeView","communityView","profileView","metasBoardView",
+    "iaView","feedView","fornecedorView","marketplaceView"
+  ];
+
+  ALL_VIEWS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle("active", id === v);
   });
+
+  // Inicializações específicas
+  setTimeout(() => {
+    if (v === "feedView" && typeof renderFeed === "function") renderFeed(postsFeed);
+    if (v === "fornecedorView" && typeof renderFornecedores === "function") renderFornecedores();
+    if (v === "marketplaceView" && typeof renderPecas === "function") renderPecas(pecasMkt, "pecasGrid");
+    if (v === "metasBoardView" && typeof renderMetasBoard === "function") {
+      const anoEl = document.getElementById("metasAnoAtual");
+      if (anoEl) anoEl.textContent = new Date().getFullYear();
+      renderMetasBoard();
+    }
+  }, 50);
 }
 
 // ─── AUTH ────────────────────────────────────────────────
@@ -1697,6 +1943,31 @@ showScreen("screenLogin");
 </script>
 
 <!-- ══ ADMIN PANEL ══ -->
+
+<!-- MODAL LOGIN ADMIN -->
+<div id="adminLoginModal" class="modal-overlay" onclick="fecharLoginAdmin(event)" style="z-index:500">
+  <div class="modal" onclick="event.stopPropagation()" style="background:#0d1f15;border:1.5px solid rgba(212,168,67,0.4);max-width:360px">
+    <div style="text-align:center;margin-bottom:20px">
+      <div style="font-size:32px;margin-bottom:8px">⚙️</div>
+      <div style="font-size:16px;font-weight:700;color:#D4A843">Painel Administrativo</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:4px">Acesso restrito — Equipe interna</div>
+    </div>
+    <div style="margin-bottom:12px">
+      <label style="display:block;font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.4px">E-mail</label>
+      <input id="adminLoginEmail" type="email" placeholder="seu@email.com" style="width:100%;background:rgba(255,255,255,0.07);border:0.5px solid rgba(255,255,255,0.2);border-radius:9px;padding:10px 12px;font-size:13px;color:#F5E6C8;font-family:inherit"/>
+    </div>
+    <div style="margin-bottom:16px">
+      <label style="display:block;font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.4px">Senha</label>
+      <input id="adminLoginSenha" type="password" placeholder="••••••••" 
+        style="width:100%;background:rgba(255,255,255,0.07);border:0.5px solid rgba(255,255,255,0.2);border-radius:9px;padding:10px 12px;font-size:13px;color:#F5E6C8;font-family:inherit"
+        onkeydown="if(event.key==='Enter')fazerLoginAdmin()"/>
+    </div>
+    <div id="adminLoginErro" style="display:none;background:rgba(220,60,60,0.1);border:0.5px solid rgba(220,60,60,0.3);border-radius:8px;padding:8px 12px;font-size:12px;color:#E04040;margin-bottom:12px;text-align:center"></div>
+    <button onclick="fazerLoginAdmin()" style="width:100%;padding:12px;border-radius:10px;border:none;background:#D4A843;color:#2D1B00;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit">Entrar no painel</button>
+    <button onclick="fecharLoginAdmin({target:{id:'adminLoginModal'}})" style="width:100%;padding:10px;border-radius:10px;border:0.5px solid rgba(255,255,255,0.15);background:transparent;color:rgba(255,255,255,0.4);font-size:13px;cursor:pointer;font-family:inherit;margin-top:8px">Cancelar</button>
+  </div>
+</div>
+
 <div id="adminScreen" class="admin-screen">
   <div class="admin-header">
     <div class="admin-logo">&#9881; Painel Admin · Faculdade da Empreendedora</div>
@@ -1707,6 +1978,7 @@ showScreen("screenLogin");
       <button class="admin-tab" onclick="showAdminView('adminChat',this)">&#128172; Chat</button>
       <button class="admin-tab" onclick="showAdminView('adminLinks',this)">&#128279; Links de Acesso</button>
       <button class="admin-tab" onclick="showAdminView('adminConfig',this)">&#9881; Config</button>
+      <button class="admin-tab" onclick="showAdminView('adminFinanceiro',this)" id="adminTabFin">&#128176; Financeiro</button>
     </div>
     <button class="admin-exit" onclick="closeAdmin()" style="padding:7px 16px;border-radius:8px;border:0.5px solid rgba(255,255,255,0.3);background:rgba(255,255,255,0.08);color:#F5E6C8;font-size:13px;cursor:pointer;font-family:inherit;font-weight:500">&#8592; Voltar ao app</button>
   </div>
@@ -1973,7 +2245,204 @@ showScreen("screenLogin");
           <button class="btn-save-config">Salvar configurações</button>
         </div>
       </div>
+    
+    <!-- FINANCEIRO ADMIN VIEW -->
+    <div id="adminFinanceiro" class="admin-view">
+      <div class="fin-wrap">
+        <div class="fin-tabs">
+          <button class="fin-tab active" onclick="finTab('dre',this)">📊 DRE</button>
+          <button class="fin-tab" onclick="finTab('fluxo',this)">💧 Fluxo de Caixa</button>
+          <button class="fin-tab" onclick="finTab('faturamento',this)">💰 Faturamento</button>
+          <button class="fin-tab" onclick="finTab('bi',this)">📈 BI Gerencial</button>
+          <button class="fin-tab" onclick="finTab('vendas',this)">🛒 Vendas</button>
+          <button class="fin-tab" onclick="finTab('lancamentos',this)">📝 Lançamentos</button>
+          <button class="fin-tab" id="finTabPrec" onclick="finTab('precificacao',this)">🏷️ Precificação</button>
+          <button class="fin-tab" id="finTabAlcada" onclick="finTab('alcada',this)">🔐 Alçada</button>
+        </div>
+        <div id="finDre" class="fin-section active">
+          <div class="kpi-row">
+            <div class="kpi-fin verde"><div class="kpi-fin-val">R$ 48.700</div><div class="kpi-fin-lbl">Receita bruta</div><div class="kpi-fin-delta delta-pos">▲ +12% vs mai</div></div>
+            <div class="kpi-fin azul"><div class="kpi-fin-val">R$ 31.200</div><div class="kpi-fin-lbl">Lucro bruto</div><div class="kpi-fin-delta delta-pos">▲ +8%</div></div>
+            <div class="kpi-fin ouro"><div class="kpi-fin-val">R$ 18.450</div><div class="kpi-fin-lbl">Lucro líquido</div><div class="kpi-fin-delta delta-pos">▲ +5%</div></div>
+            <div class="kpi-fin vermelho"><div class="kpi-fin-val">37,9%</div><div class="kpi-fin-lbl">Margem líquida</div><div class="kpi-fin-delta delta-neg">▼ -1,2pp</div></div>
+          </div>
+          <div class="fin-card">
+            <div class="fin-card-header"><div class="fin-card-title">📊 DRE — Junho 2026</div><button onclick="exportarDRE()" style="padding:5px 12px;border-radius:7px;border:0.5px solid rgba(255,255,255,0.2);background:transparent;color:rgba(255,255,255,0.5);font-size:11px;cursor:pointer">⬇ Exportar</button></div>
+            <table class="fin-table">
+              <thead><tr><th>Descrição</th><th>Valor (R$)</th><th>% Receita</th><th>vs Meta</th><th>vs Mês Ant.</th></tr></thead>
+              <tbody>
+                <tr><td colspan="5" style="color:#5CB040;font-weight:700;padding:8px 12px 2px">RECEITAS</td></tr>
+                <tr><td>Mensalidades de alunas</td><td class="val-pos">32.400</td><td>66,5%</td><td class="val-pos">+2.400</td><td class="val-pos">+8%</td></tr>
+                <tr><td>Planos fornecedores — Pro</td><td class="val-pos">9.850</td><td>20,2%</td><td class="val-pos">+850</td><td class="val-pos">+10%</td></tr>
+                <tr><td>Planos fornecedores — Básico</td><td class="val-pos">4.260</td><td>8,7%</td><td class="val-neg">-240</td><td class="delta-neu">0%</td></tr>
+                <tr><td>Marketplace (comissão 5%)</td><td class="val-pos">1.190</td><td>2,4%</td><td class="val-pos">+190</td><td class="val-pos">+19%</td></tr>
+                <tr><td>Outros</td><td class="val-pos">1.000</td><td>2,1%</td><td>—</td><td>—</td></tr>
+                <tr class="subtotal-row"><td>= RECEITA BRUTA</td><td>48.700</td><td>100%</td><td class="val-pos">+3.200</td><td class="val-pos">+12%</td></tr>
+                <tr><td>(-) Impostos (8%)</td><td class="val-neg">(3.896)</td><td>8,0%</td><td>—</td><td>—</td></tr>
+                <tr><td>(-) Estornos</td><td class="val-neg">(1.604)</td><td>3,3%</td><td>—</td><td>—</td></tr>
+                <tr class="subtotal-row"><td>= RECEITA LÍQUIDA</td><td>43.200</td><td>88,7%</td><td>—</td><td>—</td></tr>
+                <tr><td colspan="5" style="color:#E04040;font-weight:700;padding:8px 12px 2px">CUSTOS E DESPESAS</td></tr>
+                <tr><td>Salários e encargos</td><td class="val-neg">(12.800)</td><td>26,3%</td><td>—</td><td>—</td></tr>
+                <tr><td>Marketing e tráfego</td><td class="val-neg">(3.200)</td><td>6,6%</td><td>—</td><td>—</td></tr>
+                <tr><td>Tecnologia e plataforma</td><td class="val-neg">(2.400)</td><td>4,9%</td><td>—</td><td>—</td></tr>
+                <tr><td>Infraestrutura</td><td class="val-neg">(1.800)</td><td>3,7%</td><td>—</td><td>—</td></tr>
+                <tr><td>Conteúdo e produção</td><td class="val-neg">(1.200)</td><td>2,5%</td><td>—</td><td>—</td></tr>
+                <tr><td>Ferramentas</td><td class="val-neg">(980)</td><td>2,0%</td><td>—</td><td>—</td></tr>
+                <tr><td>Despesas adm.</td><td class="val-neg">(370)</td><td>0,8%</td><td>—</td><td>—</td></tr>
+                <tr class="subtotal-row"><td>= TOTAL DESPESAS</td><td class="val-neg">(22.750)</td><td>46,7%</td><td>—</td><td>—</td></tr>
+                <tr class="total-row"><td>✓ LUCRO LÍQUIDO</td><td class="val-pos">18.450</td><td>37,9%</td><td class="val-pos">+1.950</td><td class="val-pos">+5%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="finFluxo" class="fin-section">
+          <div class="kpi-row">
+            <div class="kpi-fin verde"><div class="kpi-fin-val">R$ 62.340</div><div class="kpi-fin-lbl">Saldo atual</div><div class="kpi-fin-delta delta-pos">▲ Positivo</div></div>
+            <div class="kpi-fin azul"><div class="kpi-fin-val">R$ 48.700</div><div class="kpi-fin-lbl">Entradas jun</div><div class="kpi-fin-delta delta-pos">▲ +12%</div></div>
+            <div class="kpi-fin vermelho"><div class="kpi-fin-val">R$ 22.750</div><div class="kpi-fin-lbl">Saídas jun</div></div>
+            <div class="kpi-fin ouro"><div class="kpi-fin-val">R$ 25.950</div><div class="kpi-fin-lbl">Saldo do mês</div><div class="kpi-fin-delta delta-pos">▲ Superávit</div></div>
+          </div>
+          <div class="fin-card">
+            <table class="fin-table">
+              <thead><tr><th>Data</th><th>Descrição</th><th>Tipo</th><th>Entrada</th><th>Saída</th><th>Saldo</th></tr></thead>
+              <tbody>
+                <tr><td>01/06</td><td>Mensalidades alunas</td><td><span class="categoria-badge cat-receita">Receita</span></td><td class="val-pos">32.400</td><td>—</td><td class="val-pos">68.790</td></tr>
+                <tr><td>02/06</td><td>Folha de pagamento</td><td><span class="categoria-badge cat-salario">Salário</span></td><td>—</td><td class="val-neg">(12.800)</td><td class="val-pos">55.990</td></tr>
+                <tr><td>05/06</td><td>Planos fornecedores</td><td><span class="categoria-badge cat-receita">Receita</span></td><td class="val-pos">14.110</td><td>—</td><td class="val-pos">70.100</td></tr>
+                <tr><td>10/06</td><td>Meta Ads</td><td><span class="categoria-badge cat-despesa">Marketing</span></td><td>—</td><td class="val-neg">(3.200)</td><td class="val-pos">66.900</td></tr>
+                <tr><td>15/06</td><td>Aluguel escritório</td><td><span class="categoria-badge cat-despesa">Despesa</span></td><td>—</td><td class="val-neg">(1.800)</td><td class="val-pos">65.100</td></tr>
+                <tr><td>20/06</td><td>Investimento conteúdo</td><td><span class="categoria-badge cat-invest">Invest.</span></td><td>—</td><td class="val-neg">(1.500)</td><td class="val-pos">63.600</td></tr>
+                <tr><td>30/06</td><td>Despesas adm.</td><td><span class="categoria-badge cat-despesa">Despesa</span></td><td>—</td><td class="val-neg">(2.450)</td><td class="val-pos">62.340</td></tr>
+                <tr class="total-row"><td colspan="3">SALDO FINAL</td><td class="val-pos">48.700</td><td class="val-neg">(22.750)</td><td class="val-pos">62.340</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="fin-card"><div class="fin-card-title" style="margin-bottom:12px">📊 Evolução mensal</div><div class="bar-chart" id="barChartFluxo"></div></div>
+        </div>
+        <div id="finFaturamento" class="fin-section">
+          <div class="kpi-row">
+            <div class="kpi-fin verde"><div class="kpi-fin-val">224</div><div class="kpi-fin-lbl">Alunas ativas</div><div class="kpi-fin-delta delta-pos">▲ +18</div></div>
+            <div class="kpi-fin ouro"><div class="kpi-fin-val">R$ 144,64</div><div class="kpi-fin-lbl">Ticket aluna</div></div>
+            <div class="kpi-fin azul"><div class="kpi-fin-val">94</div><div class="kpi-fin-lbl">Fornecedores</div><div class="kpi-fin-delta delta-pos">▲ +5</div></div>
+            <div class="kpi-fin verde"><div class="kpi-fin-val">R$ 48.700</div><div class="kpi-fin-lbl">Total jun</div><div class="kpi-fin-delta delta-pos">▲ +12%</div></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+            <div class="fin-card"><div class="fin-card-title" style="margin-bottom:12px">🎓 Por turma</div>
+              <table class="fin-table"><thead><tr><th>Turma</th><th>Alunas</th><th>Receita</th></tr></thead><tbody>
+                <tr><td>Turma 1</td><td>28</td><td class="val-pos">R$ 4.060</td></tr>
+                <tr><td>Turma 2</td><td>24</td><td class="val-pos">R$ 3.480</td></tr>
+                <tr><td>Turma 3</td><td>31</td><td class="val-pos">R$ 4.495</td></tr>
+                <tr><td>Demais</td><td>141</td><td class="val-pos">R$ 20.445</td></tr>
+                <tr class="total-row"><td>Total</td><td>224</td><td class="val-pos">R$ 32.480</td></tr>
+              </tbody></table>
+            </div>
+            <div class="fin-card"><div class="fin-card-title" style="margin-bottom:12px">🏭 Por plano</div>
+              <table class="fin-table"><thead><tr><th>Plano</th><th>Qtd</th><th>Total</th></tr></thead><tbody>
+                <tr><td>Pro (R$ 197)</td><td>50</td><td class="val-pos">R$ 9.850</td></tr>
+                <tr><td>Básico (R$ 97)</td><td>44</td><td class="val-pos">R$ 4.268</td></tr>
+                <tr class="total-row"><td>Total</td><td>94</td><td class="val-pos">R$ 14.118</td></tr>
+              </tbody></table>
+            </div>
+          </div>
+        </div>
+        <div id="finBi" class="fin-section">
+          <div class="kpi-row">
+            <div class="kpi-fin verde"><div class="kpi-fin-val">92%</div><div class="kpi-fin-lbl">Meta receita jun</div></div>
+            <div class="kpi-fin ouro"><div class="kpi-fin-val">78%</div><div class="kpi-fin-lbl">Meta alunas jun</div></div>
+            <div class="kpi-fin azul"><div class="kpi-fin-val">R$ 253k</div><div class="kpi-fin-lbl">Acum. 2026</div><div class="kpi-fin-delta delta-pos">▲ +23%</div></div>
+            <div class="kpi-fin verde"><div class="kpi-fin-val">38%</div><div class="kpi-fin-lbl">Margem média</div><div class="kpi-fin-delta delta-pos">▲ +3pp</div></div>
+          </div>
+          <div class="bi-grid">
+            <div class="bi-card"><div class="bi-card-title">📊 Meta vs Realizado</div><div class="meta-vs-real" id="mvr"></div></div>
+            <div class="bi-card"><div class="bi-card-title">🥧 Composição receita</div>
+              <div class="pizza-wrap">
+                <svg width="100" height="100" viewBox="0 0 36 36">
+                  <circle cx="18" cy="18" r="15.91" fill="none" stroke="#5CB040" stroke-width="3" stroke-dasharray="66.5 33.5" stroke-dashoffset="25"/>
+                  <circle cx="18" cy="18" r="15.91" fill="none" stroke="#D4A843" stroke-width="3" stroke-dasharray="20.2 79.8" stroke-dashoffset="-41.5"/>
+                  <circle cx="18" cy="18" r="15.91" fill="none" stroke="#5090E0" stroke-width="3" stroke-dasharray="8.7 91.3" stroke-dashoffset="-61.7"/>
+                  <circle cx="18" cy="18" r="15.91" fill="none" stroke="#A087C8" stroke-width="3" stroke-dasharray="4.5 95.5" stroke-dashoffset="-70.4"/>
+                </svg>
+                <div class="pizza-legend">
+                  <div class="pizza-item"><div class="pizza-dot" style="background:#5CB040"></div>Mensalidades 66,5%</div>
+                  <div class="pizza-item"><div class="pizza-dot" style="background:#D4A843"></div>Forn. Pro 20,2%</div>
+                  <div class="pizza-item"><div class="pizza-dot" style="background:#5090E0"></div>Forn. Básico 8,7%</div>
+                  <div class="pizza-item"><div class="pizza-dot" style="background:#A087C8"></div>Outros 4,6%</div>
+                </div>
+              </div>
+            </div>
+            <div class="bi-card"><div class="bi-card-title">📈 Alunas 2026</div><div class="bar-chart" id="barAlunas"></div></div>
+            <div class="bi-card"><div class="bi-card-title">💰 Receita 2026</div><div class="bar-chart" id="barReceita"></div></div>
+          </div>
+        </div>
+        <div id="finVendas" class="fin-section">
+          <div class="kpi-row">
+            <div class="kpi-fin verde"><div class="kpi-fin-val">83</div><div class="kpi-fin-lbl">Interessadas funil</div><div class="kpi-fin-delta delta-pos">▲ +11</div></div>
+            <div class="kpi-fin ouro"><div class="kpi-fin-val">21,7%</div><div class="kpi-fin-lbl">Conversão</div><div class="kpi-fin-delta delta-pos">▲ +2,1pp</div></div>
+            <div class="kpi-fin azul"><div class="kpi-fin-val">18</div><div class="kpi-fin-lbl">Novas alunas</div><div class="kpi-fin-delta delta-neu">Meta: 25</div></div>
+            <div class="kpi-fin verde"><div class="kpi-fin-val">5</div><div class="kpi-fin-lbl">Novos forn.</div><div class="kpi-fin-delta delta-pos">▲ +2</div></div>
+          </div>
+          <div class="fin-card"><div class="fin-card-title" style="margin-bottom:12px">🎯 Funil — Alunas</div>
+            <table class="fin-table"><thead><tr><th>Etapa</th><th>Qtd</th><th>%</th></tr></thead><tbody>
+              <tr><td>Interessadas</td><td>83</td><td>100%</td></tr>
+              <tr><td>Contato realizado</td><td>61</td><td>73,5%</td></tr>
+              <tr><td>Proposta enviada</td><td>38</td><td>45,8%</td></tr>
+              <tr><td>Link enviado</td><td>24</td><td>28,9%</td></tr>
+              <tr><td style="color:#5CB040;font-weight:700">✓ Convertidas</td><td style="color:#5CB040;font-weight:700">18</td><td style="color:#5CB040;font-weight:700">21,7%</td></tr>
+            </tbody></table>
+          </div>
+        </div>
+        <div id="finLancamentos" class="fin-section">
+          <div class="lancamento-form">
+            <div style="font-size:13px;font-weight:700;color:#D4A843;margin-bottom:12px">📝 Novo lançamento</div>
+            <div class="lancamento-grid">
+              <div class="fin-field"><label>Descrição *</label><input id="lancDesc" placeholder="Ex: Salário, Meta Ads..."/></div>
+              <div class="fin-field"><label>Categoria *</label><select id="lancCat"><option value="">Selecione</option><option>Receita — Mensalidade aluna</option><option>Receita — Fornecedor Pro</option><option>Receita — Fornecedor Básico</option><option>Receita — Outros</option><option>Salário e encargos</option><option>Marketing e tráfego</option><option>Tecnologia</option><option>Infraestrutura</option><option>Investimento</option><option>Despesa administrativa</option><option>Impostos</option></select></div>
+              <div class="fin-field"><label>Valor (R$) *</label><input id="lancValor" placeholder="0,00"/></div>
+              <div class="fin-field"><label>Data *</label><input id="lancData" type="date" style="color-scheme:dark"/></div>
+            </div>
+            <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;align-items:flex-end">
+              <div class="fin-field" style="flex:1;min-width:120px"><label>Tipo</label><select id="lancTipo"><option>Entrada</option><option>Saída</option></select></div>
+              <div class="fin-field" style="flex:1;min-width:120px"><label>Centro</label><select id="lancCentro"><option>Geral</option><option>Comercial</option><option>Operações</option><option>Marketing</option><option>Tecnologia</option><option>RH</option></select></div>
+              <div class="fin-field" style="flex:2;min-width:160px"><label>Observação</label><input id="lancObs" placeholder="Opcional..."/></div>
+              <button class="btn-lancar" onclick="lancarItem()">+ Lançar</button>
+            </div>
+          </div>
+          <div class="fin-card">
+            <div class="fin-card-header"><div class="fin-card-title">📋 Histórico de lançamentos</div><button onclick="exportarLancamentos()" style="padding:5px 12px;border-radius:7px;border:0.5px solid rgba(255,255,255,0.2);background:transparent;color:rgba(255,255,255,0.5);font-size:11px;cursor:pointer">⬇ CSV</button></div>
+            <table class="fin-table"><thead><tr><th>Data</th><th>Descrição</th><th>Categoria</th><th>Centro</th><th>Entrada</th><th>Saída</th><th></th></tr></thead>
+            <tbody id="lancamentosBody">
+              <tr><td>14/06</td><td>Roberta Lima — matrícula</td><td><span class="categoria-badge cat-receita">Receita</span></td><td>Comercial</td><td class="val-pos">145,00</td><td>—</td><td><button onclick="excluirLanc(this)" style="background:none;border:none;color:rgba(220,60,60,0.6);cursor:pointer">🗑</button></td></tr>
+              <tr><td>02/06</td><td>Folha junho</td><td><span class="categoria-badge cat-salario">Salário</span></td><td>RH</td><td>—</td><td class="val-neg">(12.800,00)</td><td><button onclick="excluirLanc(this)" style="background:none;border:none;color:rgba(220,60,60,0.6);cursor:pointer">🗑</button></td></tr>
+            </tbody></table>
+          </div>
+        </div>
+        <div id="finPrecificacao" class="fin-section">
+          <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px">Ajuste os preços. Mudanças entram em vigor no próximo ciclo de cobrança.</div>
+          <div class="fin-card"><div class="fin-card-title" style="margin-bottom:14px">🎓 Mensalidade de Alunas</div>
+            <div class="preco-card"><div class="preco-info"><div class="preco-nome">Mensalidade padrão</div><div class="preco-desc">Cobrada mensalmente de todas as alunas ativas</div><div class="preco-historico">R$ 97 → R$ 120 → R$ 145 (atual)</div></div><div class="preco-atual" id="precoAluna">R$ 145</div><div class="preco-input-wrap"><input type="text" id="inputAluna" placeholder="Novo valor"/><button class="btn-atualizar-preco" onclick="atualizarPreco('aluna','inputAluna','precoAluna')">Atualizar</button></div></div>
+            <div class="preco-card"><div class="preco-info"><div class="preco-nome">Taxa de matrícula</div><div class="preco-desc">Cobrada uma única vez no cadastro</div><div class="preco-historico">R$ 0 → R$ 49 (atual)</div></div><div class="preco-atual" id="precoMatricula">R$ 49</div><div class="preco-input-wrap"><input type="text" id="inputMatricula" placeholder="Novo valor"/><button class="btn-atualizar-preco" onclick="atualizarPreco('matricula','inputMatricula','precoMatricula')">Atualizar</button></div></div>
+          </div>
+          <div class="fin-card"><div class="fin-card-title" style="margin-bottom:14px">🏭 Planos Fornecedores</div>
+            <div class="preco-card"><div class="preco-info"><div class="preco-nome">Plano Básico</div><div class="preco-desc">10 posts/mês · Posts expiram em 30 dias</div><div class="preco-historico">R$ 67 → R$ 97 (atual) · 44 assinantes</div></div><div class="preco-atual" id="precoBasico">R$ 97</div><div class="preco-input-wrap"><input type="text" id="inputBasico" placeholder="Novo valor"/><button class="btn-atualizar-preco" onclick="atualizarPreco('basico','inputBasico','precoBasico')">Atualizar</button></div></div>
+            <div class="preco-card"><div class="preco-info"><div class="preco-nome">Plano Pro</div><div class="preco-desc">Posts ilimitados · Permanentes 🔒 · Badge ✓</div><div class="preco-historico">R$ 147 → R$ 197 (atual) · 50 assinantes</div></div><div class="preco-atual" id="precoPro">R$ 197</div><div class="preco-input-wrap"><input type="text" id="inputPro" placeholder="Novo valor"/><button class="btn-atualizar-preco" onclick="atualizarPreco('pro','inputPro','precoPro')">Atualizar</button></div></div>
+          </div>
+        </div>
+        <div id="finAlcada" class="fin-section">
+          <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:14px">Defina permissões por colaborador. Apenas Diretores podem alterar.</div>
+          <div class="fin-card"><div class="fin-card-title" style="margin-bottom:12px">👥 Colaboradores</div>
+            <table class="alcada-table"><thead><tr><th>Nome</th><th>Cargo</th><th>DRE</th><th>Fluxo</th><th>Faturamento</th><th>BI</th><th>Vendas</th><th>Lançamentos</th><th>Precificação</th></tr></thead><tbody id="alcadaBody"></tbody></table>
+          </div>
+          <div class="fin-card"><div class="fin-card-title" style="margin-bottom:10px">➕ Adicionar colaborador</div>
+            <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;align-items:end">
+              <div class="fin-field"><label>Nome</label><input id="colabNome" placeholder="Nome completo"/></div>
+              <div class="fin-field"><label>Cargo</label><select id="colabCargo"><option>Diretor</option><option>Gerente</option><option>Coordenador</option><option>Vendedor</option><option>Auxiliar</option></select></div>
+              <button class="btn-lancar" onclick="adicionarColab()">+ Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+</div>
 
   </div>
 </div>
@@ -1983,11 +2452,30 @@ showScreen("screenLogin");
 function openAdmin(){document.getElementById("adminScreen").classList.add("open");}
 function closeAdmin(){document.getElementById("adminScreen").classList.remove("open");}
 
-function showAdminView(id,btn){
-  document.querySelectorAll(".admin-tab").forEach(t=>t.classList.remove("active"));
-  if(btn)btn.classList.add("active");
-  document.querySelectorAll(".admin-view").forEach(v=>v.classList.remove("active"));
-  document.getElementById(id).classList.add("active");
+function showAdminView(id, btn) {
+  document.querySelectorAll(".admin-tab").forEach(t => t.classList.remove("active"));
+  if (btn) btn.classList.add("active");
+  document.querySelectorAll(".admin-view").forEach(v => v.classList.remove("active"));
+  const el = document.getElementById(id);
+  if (el) el.classList.add("active");
+  // Inicializa financeiro quando aberto
+  if (id === "adminFinanceiro") {
+    // Ativa a primeira fin-section
+    const finContainer = document.getElementById('adminFinanceiro');
+    if (finContainer) {
+      finContainer.querySelectorAll('.fin-section').forEach(s => s.classList.remove('active'));
+      const firstSection = finContainer.querySelector('.fin-section');
+      if (firstSection) firstSection.classList.add('active');
+      finContainer.querySelectorAll('.fin-tab').forEach(t => t.classList.remove('active'));
+      const firstTab = finContainer.querySelector('.fin-tab');
+      if (firstTab) firstTab.classList.add('active');
+    }
+    setTimeout(() => {
+      if (typeof renderBI === "function") renderBI();
+      if (typeof renderBarFluxo === "function") renderBarFluxo();
+      if (typeof renderAlcada === "function") renderAlcada();
+    }, 150);
+  }
 }
 
 // Preenche tabela de alunas
@@ -3229,6 +3717,590 @@ function showView(v, btn) {
 
 // Sobrescreve window.showView para garantir que esta versão seja usada
 window.showView = showView;
+</script>
+
+<script>
+// ─── NAVEGAÇÃO HOME ──────────────────────────────────────────────
+function irPara(viewId, titulo) {
+  // Esconde todas as views
+  const ALL_VIEWS = [
+    "homeView","treeView","communityView","profileView","metasBoardView",
+    "iaView","feedView","fornecedorView","marketplaceView"
+  ];
+  ALL_VIEWS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.remove("active");
+  });
+
+  // Mostra a view alvo
+  const target = document.getElementById(viewId);
+  if (target) target.classList.add("active");
+
+  // Atualiza título do header
+  const titleEl = document.getElementById('headerViewTitle');
+  if (titleEl) titleEl.textContent = titulo;
+
+  // Mostra botão voltar
+  const backBtn = document.getElementById('headerBackBtn');
+  if (backBtn) backBtn.style.display = 'flex';
+
+  // Inicializações específicas
+  setTimeout(() => {
+    if (viewId === "treeView") { if(typeof buildTree==='function') buildTree(); if(typeof aplicarEstacao==='function') aplicarEstacao(getEstacaoAtual()); }
+    if (viewId === "feedView" && typeof renderFeed==='function') renderFeed(postsFeed);
+    if (viewId === "fornecedorView" && typeof renderFornecedores==='function') renderFornecedores();
+    if (viewId === "marketplaceView" && typeof renderPecas==='function') renderPecas(pecasMkt, "pecasGrid");
+    if (viewId === "metasBoardView") {
+      const anoEl = document.getElementById("metasAnoAtual");
+      if (anoEl) anoEl.textContent = new Date().getFullYear();
+      if(typeof renderMetasBoard==='function') renderMetasBoard();
+    }
+  }, 50);
+}
+
+function voltarHome() {
+  const ALL_VIEWS = [
+    "homeView","treeView","communityView","profileView","metasBoardView",
+    "iaView","feedView","fornecedorView","marketplaceView"
+  ];
+  ALL_VIEWS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.remove("active");
+  });
+  document.getElementById("homeView").classList.add("active");
+
+  // Esconde botão voltar e reseta título
+  const backBtn = document.getElementById('headerBackBtn');
+  if (backBtn) backBtn.style.display = 'none';
+  const titleEl = document.getElementById('headerViewTitle');
+  if (titleEl) titleEl.textContent = '';
+}
+
+// Atualiza o enterApp para ir para home
+const _origEnterAppFinal = window.enterApp;
+window.enterApp = function() {
+  _origEnterAppFinal();
+  setTimeout(() => {
+    // Garante que apenas homeView está ativa ao entrar
+    const ALL_VIEWS = [
+      "treeView","communityView","profileView","metasBoardView",
+      "iaView","feedView","fornecedorView","marketplaceView"
+    ];
+    ALL_VIEWS.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.classList.remove("active");
+    });
+    const home = document.getElementById("homeView");
+    if (home) home.classList.add("active");
+  }, 200);
+};
+</script>
+
+<script>
+// ─── ALUNAS EXTRAS (virão do banco de dados quando conectar o Supabase)
+const ALUNAS_EXTRA = [];
+
+// Lista completa
+// TODAS_ALUNAS declarada abaixo
+
+// ─── ESTADO DE FILTRO ────────────────────────────────────────────
+let filtroTurma = '';
+let filtroEstado = '';
+let filtroBusca = '';
+let alunaDestaque = null;
+
+function getAlunasFiltradas() {
+  let lista = TODAS_ALUNAS;
+  if (filtroTurma) lista = lista.filter(a => a.turma === filtroTurma);
+  if (filtroEstado) lista = lista.filter(a => a.estado === filtroEstado);
+  if (filtroBusca) {
+    const q = filtroBusca.toLowerCase();
+    lista = lista.filter(a =>
+      a.nome.toLowerCase().includes(q) ||
+      a.loja.toLowerCase().includes(q) ||
+      (a.ig||'').toLowerCase().includes(q)
+    );
+  }
+  // Mostra no máximo 250 mais recentes (quando conectar ao banco)
+  return lista.slice(0, 250);
+}
+
+// ─── ZOOM ADAPTATIVO ─────────────────────────────────────────────
+function getRaio(totalAlunas, zoomAtual) {
+  const base = totalAlunas <= 50  ? 26 :
+               totalAlunas <= 100 ? 22 :
+               totalAlunas <= 200 ? 18 : 14;
+  return Math.max(10, Math.min(26, base * Math.sqrt(zoomAtual)));
+}
+
+// ─── POSIÇÕES DINÂMICAS (crescendo como frutos nos galhos) ──────
+function gerarPosicoes(total) {
+  // Posições mapeadas sobre os galhos da árvore
+  // Crescem de cima para baixo, de dentro para fora
+  // Como frutos naturais — assimétricas e orgânicas
+  const base = [
+    // Topo — 1 posição
+    {y:85,  xs:[340]},
+    // 2a fileira — 3
+    {y:148, xs:[265,340,418]},
+    // 3a fileira — 5
+    {y:210, xs:[192,272,340,415,492]},
+    // 4a fileira — 6
+    {y:272, xs:[152,232,308,375,452,530]},
+    // 5a fileira — 7
+    {y:332, xs:[138,215,288,348,412,482,552]},
+    // 6a fileira — 7
+    {y:390, xs:[152,222,292,348,408,472,538]},
+    // 7a fileira — 7
+    {y:446, xs:[168,238,302,348,402,462,522]},
+    // 8a fileira — 7
+    {y:498, xs:[188,252,312,350,396,450,506]},
+    // 9a fileira — 7
+    {y:546, xs:[212,272,322,352,392,438,490]},
+    // 10a fileira — 6
+    {y:590, xs:[240,292,334,358,392,432]},
+    // 11a fileira — 6
+    {y:628, xs:[268,312,342,362,390,422]},
+    // 12a fileira — 5
+    {y:662, xs:[292,326,346,366,396]},
+    // 13a fileira — 4
+    {y:692, xs:[312,338,358,384]},
+    // 14a fileira — 3
+    {y:716, xs:[325,346,368]},
+    // 15a fileira — 2
+    {y:736, xs:[334,356]},
+  ];
+
+  const positions = [];
+  for (const row of base) {
+    for (const x of row.xs) {
+      positions.push({ x, y: row.y });
+      if (positions.length >= total) return positions;
+    }
+  }
+  return positions;
+}
+
+// ─── BUILD TREE INTELIGENTE ──────────────────────────────────────
+function buildTreeInteligente() {
+  const svg = document.getElementById('nodesSVG');
+  if (!svg) return;
+  svg.innerHTML = '';
+
+  const filtradas = getAlunasFiltradas();
+  const total = filtradas.length;
+  const R = Math.max(10, Math.min(26, getRaio(total, zoomLevel)));
+  const positions = gerarPosicoes(total);
+  const ns = 'http://www.w3.org/2000/svg';
+  const fontSize = Math.max(7, Math.min(12, R * 0.46));
+  const showLabel = R > 14;
+
+  const visEl = document.getElementById('visCount');
+  if (visEl) visEl.textContent = total;
+  const totalEl = document.getElementById('totalCount');
+  if (totalEl) totalEl.textContent = TODAS_ALUNAS.length;
+
+  // Glow filter
+  const defs = document.createElementNS(ns, 'defs');
+  defs.innerHTML = '<filter id="glow"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>';
+  svg.appendChild(defs);
+
+  filtradas.forEach((a, i) => {
+    if (i >= positions.length) return;
+    const { x, y } = positions[i];
+    const isDestaque = alunaDestaque && alunaDestaque.id === a.id;
+
+    const g = document.createElementNS(ns, 'g');
+    g.style.cursor = 'pointer';
+    g.setAttribute('transform', `translate(${x},${y})`);
+    g.addEventListener('click', () => openModal(a));
+    g.addEventListener('mouseenter', (e) => showTip(a, e));
+    g.addEventListener('mouseleave', hideTip);
+
+    // Sombra
+    const sh = document.createElementNS(ns, 'circle');
+    sh.setAttribute('cx', 1.5); sh.setAttribute('cy', 2.5); sh.setAttribute('r', R);
+    sh.setAttribute('fill', isDestaque ? 'rgba(212,168,67,0.3)' : 'rgba(0,0,0,0.25)');
+    g.appendChild(sh);
+
+    // Círculo
+    const ci = document.createElementNS(ns, 'circle');
+    ci.setAttribute('cx', 0); ci.setAttribute('cy', 0); ci.setAttribute('r', R);
+    ci.setAttribute('fill', '#FFF8EE');
+    ci.setAttribute('stroke', isDestaque ? '#D4A843' : a.cor);
+    ci.setAttribute('stroke-width', isDestaque ? 3 : Math.max(1.5, R * 0.12));
+    if (isDestaque) ci.setAttribute('filter', 'url(#glow)');
+    g.appendChild(ci);
+
+    // Iniciais — sempre visíveis
+    const tx = document.createElementNS(ns, 'text');
+    tx.setAttribute('x', 0); tx.setAttribute('y', 1);
+    tx.setAttribute('text-anchor', 'middle');
+    tx.setAttribute('dominant-baseline', 'central');
+    tx.setAttribute('font-size', fontSize);
+    tx.setAttribute('font-weight', '700');
+    tx.setAttribute('fill', isDestaque ? '#A87820' : '#5A3E1B');
+    tx.setAttribute('font-family', 'Arial,Helvetica,sans-serif');
+    tx.setAttribute('font-variant-emoji', 'text');
+    // Garante que apenas texto ASCII é exibido
+    tx.textContent = (a.ini || 'XX').replace(/[^ -]/g, '').substring(0,2).toUpperCase() || 'AA';
+    g.appendChild(tx);
+
+    // Nome abaixo com zoom alto
+    if (showLabel) {
+      const nm = document.createElementNS(ns, 'text');
+      nm.setAttribute('x', 0); nm.setAttribute('y', R + 10);
+      nm.setAttribute('text-anchor', 'middle');
+      nm.setAttribute('font-size', Math.max(6, fontSize * 0.7));
+      nm.setAttribute('fill', isDestaque ? '#D4A843' : '#F5E6C8');
+      nm.setAttribute('font-family', 'Segoe UI,Arial,sans-serif');
+      nm.textContent = a.nome.split(' ')[0];
+      g.appendChild(nm);
+    }
+
+    svg.appendChild(g);
+  });
+}
+
+// ─── BUSCA COM DESTAQUE ──────────────────────────────────────────
+function buscarNaArvore(q) {
+  alunaDestaque = null;
+  if (q.length >= 3) {
+    const ql = q.toLowerCase();
+    const encontrada = TODAS_ALUNAS.find(a =>
+      a.nome.toLowerCase().includes(ql) ||
+      a.loja.toLowerCase().includes(ql) ||
+      (a.ig||'').toLowerCase().includes(ql)
+    );
+    if (encontrada) alunaDestaque = encontrada;
+    visible = TODAS_ALUNAS.filter(a =>
+      a.nome.toLowerCase().includes(ql) ||
+      a.loja.toLowerCase().includes(ql) ||
+      (a.ig||'').toLowerCase().includes(ql)
+    );
+  } else {
+    visible = TODAS_ALUNAS.slice(0, 250);
+    alunaDestaque = null;
+  }
+  document.getElementById('visCount').textContent = visible.length;
+  buildTree();
+}
+
+function filtrarPorTurma(val) {
+  filtroTurma = val;
+  visible = val ? TODAS_ALUNAS.filter(a => a.turma === val) : TODAS_ALUNAS.slice(0,250);
+  buildTree();
+}
+
+function filtrarPorEstado(val) {
+  filtroEstado = val;
+  visible = val ? TODAS_ALUNAS.filter(a => a.estado === val) : TODAS_ALUNAS.slice(0,250);
+  buildTree();
+}
+
+// buscarNaArvore usa o buildTree original com filtro
+window.filterTree = () => buscarNaArvore(document.getElementById('searchInput')?.value || '');
+</script>
+
+<script>
+// ─── MÓDULO FINANCEIRO ───────────────────────────────────────────
+
+// Sub-abas
+function finTab(id, btn) {
+  const container = document.getElementById('adminFinanceiro') || document;
+  container.querySelectorAll('.fin-tab').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  container.querySelectorAll('.fin-section').forEach(s => s.classList.remove('active'));
+  const el = document.getElementById('fin' + id.charAt(0).toUpperCase() + id.slice(1));
+  if (el) el.classList.add('active');
+  setTimeout(() => {
+    if (id === 'bi' && typeof renderBI === 'function') renderBI();
+    if (id === 'fluxo' && typeof renderBarFluxo === 'function') renderBarFluxo();
+    if (id === 'alcada' && typeof renderAlcada === 'function') renderAlcada();
+  }, 50);
+}
+
+function setPeriodo(btn, periodo) {
+  document.querySelectorAll('.periodo-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  showToast('📊 Período: ' + periodo);
+}
+
+// ─── GRÁFICOS ────────────────────────────────────────────────────
+const MESES = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+
+function renderBarChart(containerId, dados, cor, prefixo) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  const max = Math.max(...dados.map(d => d.val));
+  el.innerHTML = dados.map(d => {
+    const h = Math.round((d.val / max) * 110);
+    return `<div class="bar-col">
+      <div class="bar-val">${prefixo}${d.val >= 1000 ? (d.val/1000).toFixed(0)+'k' : d.val}</div>
+      <div class="bar-fill" style="height:${h}px;background:${cor}"></div>
+      <div class="bar-label">${d.label}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderBI() {
+  // Meta vs Realizado
+  const mvr = document.getElementById('mvr');
+  if (mvr) {
+    const items = [
+      { label:'Receita (R$)', meta: 53000, real: 48700, cor:'#D4A843' },
+      { label:'Novas alunas', meta: 25, real: 18, cor:'#5CB040' },
+      { label:'Fornecedores', meta: 8, real: 5, cor:'#5090E0' },
+      { label:'Margem líquida', meta: 40, real: 37.9, cor:'#A087C8' },
+    ];
+    mvr.innerHTML = items.map(item => {
+      const pct = Math.min(100, Math.round(item.real / item.meta * 100));
+      const metaPct = 80; // onde a linha de meta aparece
+      return `<div class="mvr-item">
+        <div class="mvr-label"><span>${item.label}</span><span style="color:${pct>=80?'#5CB040':'#E09040'}">${pct}% da meta</span></div>
+        <div class="mvr-track">
+          <div class="mvr-real" style="width:${pct}%;background:${item.cor}"></div>
+          <div class="mvr-meta-line" style="left:${metaPct}%"></div>
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  // Gráficos de barra
+  renderBarChart('barAlunas',
+    MESES.slice(0,6).map((m,i) => ({ label:m, val:[180,192,198,206,213,224][i] })),
+    'linear-gradient(180deg,#5CB040,#2D6A1F)', '');
+  renderBarChart('barReceita',
+    MESES.slice(0,6).map((m,i) => ({ label:m, val:[38200,40100,41800,43600,43500,48700][i] })),
+    'linear-gradient(180deg,#D4A843,#A87820)', 'R$');
+}
+
+function renderBarFluxo() {
+  renderBarChart('barChartFluxo',
+    MESES.slice(0,6).map((m,i) => ({ label:m, val:[36390,42100,44800,48200,51300,62340][i] })),
+    'linear-gradient(180deg,#5090E0,#1A3A6A)', 'R$');
+}
+
+// ─── LANÇAMENTOS ─────────────────────────────────────────────────
+function lancarItem() {
+  const desc = document.getElementById('lancDesc').value.trim();
+  const cat = document.getElementById('lancCat').value;
+  const valor = document.getElementById('lancValor').value.trim();
+  const data = document.getElementById('lancData').value;
+  const tipo = document.getElementById('lancTipo').value;
+  const centro = document.getElementById('lancCentro').value;
+
+  if (!desc || !cat || !valor || !data) { showToast('⚠️ Preencha os campos obrigatórios!'); return; }
+
+  const tbody = document.getElementById('lancamentosBody');
+  const isEntrada = tipo === 'Entrada' || cat.startsWith('Receita');
+  const catClass = isEntrada ? 'cat-receita' : cat.includes('Salário') ? 'cat-salario' : cat.includes('Invest') ? 'cat-invest' : 'cat-despesa';
+  const catLabel = isEntrada ? 'Receita' : cat.includes('Salário') ? 'Salário' : cat.includes('Invest') ? 'Invest.' : 'Despesa';
+
+  const dataFmt = data.split('-').reverse().join('/');
+  const tr = document.createElement('tr');
+  tr.innerHTML = `<td>${dataFmt}</td><td>${desc}</td><td><span class="categoria-badge ${catClass}">${catLabel}</span></td><td>${centro}</td>
+    <td class="${isEntrada?'val-pos':'val-neu'}">${isEntrada ? valor : '—'}</td>
+    <td class="${!isEntrada?'val-neg':'val-neu'}">${!isEntrada ? '('+valor+')' : '—'}</td>
+    <td><button onclick="excluirLanc(this)" style="background:none;border:none;color:rgba(220,60,60,0.6);cursor:pointer;font-size:12px">🗑</button></td>`;
+
+  tbody.insertBefore(tr, tbody.firstChild);
+  document.getElementById('lancDesc').value = '';
+  document.getElementById('lancValor').value = '';
+  showToast('✓ Lançamento registrado!');
+}
+
+function excluirLanc(btn) {
+  if (confirm('Excluir este lançamento?')) {
+    btn.closest('tr').remove();
+    showToast('Lançamento removido.');
+  }
+}
+
+function exportarLancamentos() {
+  showToast('⬇ Exportando CSV...');
+}
+function exportarDRE() {
+  showToast('⬇ Exportando DRE...');
+}
+
+// ─── PRECIFICAÇÃO ────────────────────────────────────────────────
+function atualizarPreco(tipo, inputId, displayId) {
+  const val = document.getElementById(inputId).value.trim();
+  if (!val) { showToast('⚠️ Digite o novo valor!'); return; }
+  const num = parseFloat(val.replace(/[^0-9,]/g,'').replace(',','.'));
+  if (isNaN(num) || num <= 0) { showToast('⚠️ Valor inválido!'); return; }
+  document.getElementById(displayId).textContent = 'R$ ' + num.toLocaleString('pt-BR', {minimumFractionDigits:0});
+  document.getElementById(inputId).value = '';
+  showToast('✓ Preço atualizado! Entra em vigor no próximo ciclo.');
+}
+
+// ─── ALÇADA ──────────────────────────────────────────────────────
+const CARGO_PERMISSOES = {
+  Diretor:     [true,true,true,true,true,true,true],
+  Gerente:     [true,true,true,true,true,true,false],
+  Coordenador: [true,false,true,true,true,false,false],
+  Vendedor:    [false,false,false,false,true,false,false],
+  Auxiliar:    [false,false,false,false,false,false,false],
+};
+
+let COLABORADORES = [
+  { nome:'Bruno Santos', cargo:'Diretor' },
+  { nome:'Maria Gerente', cargo:'Gerente' },
+  { nome:'João Coord.', cargo:'Coordenador' },
+  { nome:'Ana Vendas', cargo:'Vendedor' },
+  { nome:'Paula Aux.', cargo:'Auxiliar' },
+];
+
+const SECOES_FIN = ['DRE','Fluxo','Faturamento','BI','Vendas','Lançamentos','Precificação'];
+
+function renderAlcada() {
+  const tbody = document.getElementById('alcadaBody');
+  if (!tbody) return;
+  tbody.innerHTML = COLABORADORES.map((c, ci) => {
+    const perms = CARGO_PERMISSOES[c.cargo] || [false,false,false,false,false,false,false];
+    const cargoClass = 'cargo-' + ({'Diretor':'diretor','Gerente':'gerente','Coordenador':'coordenador','Vendedor':'vendedor','Auxiliar':'auxiliar'}[c.cargo] || c.cargo.toLowerCase());
+    const toggles = perms.map((p, pi) => `
+      <td style="text-align:center">
+        <button class="toggle-alcada ${p?'on':'off'}" 
+          onclick="toggleAlcada(this,${ci},${pi})" 
+          ${c.cargo==='Auxiliar'||c.cargo==='Vendedor'&&pi!==4?'':''}
+          title="${p?'Permitido':'Bloqueado'}">
+        </button>
+      </td>`).join('');
+    return `<tr>
+      <td style="font-weight:600;color:#F5E6C8">${c.nome}</td>
+      <td><span class="cargo-badge ${cargoClass}">${c.cargo}</span></td>
+      ${toggles}
+    </tr>`;
+  }).join('');
+}
+
+function toggleAlcada(btn, colabIdx, secaoIdx) {
+  const cargo = COLABORADORES[colabIdx].cargo;
+  if (cargo === 'Diretor') { showToast('⚠️ Permissões do Diretor não podem ser alteradas.'); return; }
+  btn.classList.toggle('on');
+  btn.classList.toggle('off');
+  showToast('✓ Permissão atualizada para ' + COLABORADORES[colabIdx].nome);
+}
+
+function adicionarColab() {
+  const nome = document.getElementById('colabNome').value.trim();
+  const cargo = document.getElementById('colabCargo').value;
+  if (!nome) { showToast('⚠️ Digite o nome do colaborador!'); return; }
+  COLABORADORES.push({ nome, cargo });
+  document.getElementById('colabNome').value = '';
+  renderAlcada();
+  showToast('✓ ' + nome + ' adicionado como ' + cargo + '!');
+}
+
+// Inicializa ao entrar na view
+</script>
+
+<script>
+// ─── LOGIN ADMIN ─────────────────────────────────────────────────
+const ADMIN_USUARIOS = [
+  { email: 'diretor@faculdade.com', senha: 'dir@2026', cargo: 'Diretor', nome: 'Bruno Santos' },
+  { email: 'gerente@faculdade.com', senha: 'ger@2026', cargo: 'Gerente', nome: 'Maria Gerente' },
+  { email: 'coord@faculdade.com',   senha: 'coo@2026', cargo: 'Coordenador', nome: 'João Coord.' },
+  { email: 'vendas@faculdade.com',  senha: 'ven@2026', cargo: 'Vendedor', nome: 'Ana Vendas' },
+  { email: 'aux@faculdade.com',     senha: 'aux@2026', cargo: 'Auxiliar', nome: 'Paula Aux.' },
+];
+
+let adminLogado = null;
+
+// Permissões por cargo no financeiro
+const FIN_PERMISSOES = {
+  Diretor:     { verFin: true,  verPlanos: true,  editarForn: true,  excluirForn: true,  verAlcada: true },
+  Gerente:     { verFin: true,  verPlanos: true,  editarForn: true,  excluirForn: false, verAlcada: false },
+  Coordenador: { verFin: true,  verPlanos: false, editarForn: false, excluirForn: false, verAlcada: false },
+  Vendedor:    { verFin: false, verPlanos: false, editarForn: false, excluirForn: false, verAlcada: false },
+  Auxiliar:    { verFin: false, verPlanos: false, editarForn: false, excluirForn: false, verAlcada: false },
+};
+
+// Sobrescreve openAdmin para exibir modal de login
+const _origOpenAdmin = window.openAdmin;
+window.openAdmin = function() {
+  if (adminLogado) {
+    // Já logado — abre direto
+    _origOpenAdmin && _origOpenAdmin();
+    document.getElementById('adminScreen').classList.add('open');
+    aplicarPermissoesAdmin();
+  } else {
+    document.getElementById('adminLoginModal').classList.add('open');
+    setTimeout(() => document.getElementById('adminLoginEmail').focus(), 100);
+  }
+};
+
+function fecharLoginAdmin(e) {
+  if (e.target.id === 'adminLoginModal') {
+    document.getElementById('adminLoginModal').classList.remove('open');
+    document.getElementById('adminLoginErro').style.display = 'none';
+  }
+}
+
+function fazerLoginAdmin() {
+  const email = document.getElementById('adminLoginEmail').value.trim().toLowerCase();
+  const senha = document.getElementById('adminLoginSenha').value;
+  const erroEl = document.getElementById('adminLoginErro');
+
+  const usuario = ADMIN_USUARIOS.find(u => u.email === email && u.senha === senha);
+
+  if (!usuario) {
+    erroEl.textContent = '❌ E-mail ou senha incorretos.';
+    erroEl.style.display = 'block';
+    document.getElementById('adminLoginSenha').value = '';
+    return;
+  }
+
+  adminLogado = usuario;
+  erroEl.style.display = 'none';
+  document.getElementById('adminLoginModal').classList.remove('open');
+  document.getElementById('adminLoginEmail').value = '';
+  document.getElementById('adminLoginSenha').value = '';
+
+  // Abre o painel
+  document.getElementById('adminScreen').classList.add('open');
+  aplicarPermissoesAdmin();
+  showToast('✓ Bem-vindo(a), ' + usuario.nome + ' — ' + usuario.cargo);
+}
+
+function aplicarPermissoesAdmin() {
+  if (!adminLogado) return;
+  const perms = FIN_PERMISSOES[adminLogado.cargo];
+
+  // Aba financeiro — só Diretor e Gerente
+  const tabFin = document.getElementById('adminTabFin');
+  if (tabFin) tabFin.style.display = perms.verFin ? 'block' : 'none';
+
+  // Badge de cargo no header admin
+  const adminLogo = document.querySelector('.admin-logo');
+  if (adminLogo) {
+    adminLogo.innerHTML = '⚙️ Admin — <span style="color:#F5E6C8">' + adminLogado.nome + '</span> <span style="font-size:11px;background:rgba(212,168,67,0.2);padding:2px 8px;border-radius:999px;color:#D4A843">' + adminLogado.cargo + '</span>';
+  }
+
+  // Aba alçada — só Diretor
+  const alcadaItems = document.querySelectorAll('[onclick*="adminAlcada"]');
+  // Botão de excluir fornecedor — só Diretor
+  // Precificação — só Diretor e Gerente
+  const tabPrec = document.querySelector('[onclick*="finPrecificacao"]');
+
+  // Ocultar seções do financeiro conforme cargo
+  if (!perms.verPlanos) {
+    const precSection = document.getElementById('finPrecificacao');
+    if (precSection) precSection.innerHTML = '<div style="padding:40px;text-align:center;color:rgba(255,255,255,0.3)">🔒 Acesso restrito — Diretores e Gerentes</div>';
+  }
+  if (!perms.verAlcada) {
+    const alcadaSection = document.getElementById('finAlcada');
+    if (alcadaSection) alcadaSection.innerHTML = '<div style="padding:40px;text-align:center;color:rgba(255,255,255,0.3)">🔒 Acesso restrito — apenas Diretores</div>';
+  }
+}
+
+// Logout admin
+function closeAdmin() {
+  document.getElementById('adminScreen').classList.remove('open');
+  // Não desloga — mantém sessão enquanto o app está aberto
+}
 </script>
 </body>
 </html>
